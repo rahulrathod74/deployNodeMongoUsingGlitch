@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URI, {
   .then(() => console.log('MongoDB connected...'))
   .catch(err => console.error('MongoDB connection error:', err));
 app.get("/",(req,res)=>{
-    res.send("welcome to home page")
+    res.json({msg:"welcome to home page"})
 })
 // Use post routes
 app.use('/posts', postRoutes);
